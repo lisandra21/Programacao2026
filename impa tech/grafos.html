@@ -1,0 +1,37 @@
+<!doctype html> 
+<meta charset="UTF-8"> <!-- para usar caracteres acentuados e outros-->
+<html lang="en"> <!---->
+<head> <!--cabeçalho-->
+    <style>
+        .drawArea {
+            height: 700px;
+            width: 800px;
+            background-color: beige; 
+            margin: auto;
+            border-style: double;
+            border-width: 5px;
+            border-color: #111111;
+        }
+    </style>
+
+    <title>Visualização de Grafo com visjs</title>
+    <script
+            type="text/javascript"
+            src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script> <!--Descreve que um script javascript que reside na URL descrita será usado-->
+</head>
+
+<body>
+<div>
+    <h1>Realização de multigrafos e grafos simples usando o Teorema de Erdös-Gallai.</h1> <!--h1 é usado pra títulos-->
+    <p>Nome: Lisandra Menezes Fagundes</p> 
+    <p>Matéria: Matemática Discreta (MC21) - 2026.1</p>
+    <p>Digite uma sequência de inteiros não negativos separados por espaços: </p>
+    <input type="text" id="meuInput" placeholder="Ex: 3 3 2 2 2"> <!-- salvo com esse id para pegar ele e usar no script.js -->
+    <button onclick="realizacao()">Verificar e desenhar</button>
+    <h3 id="resultado"></h3> <!-- "quadro de avisos" onde vai aparecer as msgs se forma multigrafo, se forma grafo simples, etc -->
+    <script src="script.js"></script> <!-- link para o arquivo js na pasta com o codigo -->
+    <div id="drawArea" class="drawArea"></div> <!-- declaramos o segmento onde será desenhado usando nossa nova classe de design  -->
+</div>
+</body>
+</html>
